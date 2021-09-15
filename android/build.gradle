@@ -29,13 +29,13 @@ android {
   compileSdkVersion getExtOrIntegerDefault('compileSdkVersion')
   buildToolsVersion getExtOrDefault('buildToolsVersion')
   defaultConfig {
-    minSdkVersion 16
+    minSdkVersion 21
     targetSdkVersion getExtOrIntegerDefault('targetSdkVersion')
     versionCode 1
     versionName "1.0"
-    
+
   }
-  
+
   buildTypes {
     release {
       minifyEnabled false
@@ -123,8 +123,16 @@ repositories {
 
 def kotlin_version = getExtOrDefault('kotlinVersion')
 
+repositories {
+  maven { url "https://jitpack.io" }
+}
+
 dependencies {
   // noinspection GradleDynamicVersion
   api 'com.facebook.react:react-native:+'
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+
+  implementation("androidx.coordinatorlayout:coordinatorlayout:1.1.0")
+
+  implementation 'com.github.fornewid:neumorphism:0.3.0'
 }

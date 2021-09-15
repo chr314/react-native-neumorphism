@@ -5,7 +5,7 @@ wip
 ## Installation
 
 ```sh
-npm install react-native-neumorphism
+yarn install react-native-neumorphism
 ```
 
 ## Usage
@@ -15,7 +15,16 @@ import Neumorphism from "react-native-neumorphism";
 
 // ...
 
-const result = await Neumorphism.multiply(3, 7);
+<Neumorphism
+  lightColor={'#dedddd'}
+  darkColor={'#979797'}
+  shapeType={'flat'}
+  radius={50}
+>
+  <View style={{ width: 200, height: 200}}>
+    <Text>TEST</Text>
+  </View>
+</Neumorphism>
 ```
 
 ## Contributing
