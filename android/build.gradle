@@ -132,7 +132,5 @@ dependencies {
   api 'com.facebook.react:react-native:+'
   implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 
-  implementation("androidx.coordinatorlayout:coordinatorlayout:1.1.0")
-
   implementation 'com.github.fornewid:neumorphism:0.3.0'
 }
