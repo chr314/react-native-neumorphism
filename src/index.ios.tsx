@@ -6,9 +6,7 @@ type NeumorphismProps = {
   darkColor?: string;
   radius?: number;
   shapeType?: 'flat' | 'pressed' | 'basin';
-  backgroundColor?: string;
   style?: ViewStyle;
-  color?: string;
   disabled?: boolean;
   children?: React.ReactNode;
 };

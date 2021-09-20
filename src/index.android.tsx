@@ -8,6 +8,7 @@ type NeumorphismProps = {
   radius?: number;
   shapeType?: 'flat' | 'pressed' | 'basin';
   style?: ViewStyle;
+  disabled?: boolean;
   children?: React.ReactNode;
 };
 
@@ -23,20 +24,22 @@ export default (props: NeumorphismProps) => {
     props.darkColor = parseColor(props.darkColor)?.hex;
   }
   return (
-    <View style={[props.style]}>
-      <NeumorphismCardView
-        lightColor={props.lightColor}
-        darkColor={props.darkColor}
-        radius={props.radius}
-        shapeType={props.shapeType}
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          bottom: 0,
-          right: 0,
-        }}
-      />
+    <View style={props.style}>
+      {!props.disabled && (
+        <NeumorphismCardView
+          lightColor={props.lightColor}
+          darkColor={props.darkColor}
+          radius={props.radius}
+          shapeType={props.shapeType}
+          style={{
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            bottom: 0,
+            right: 0,
+          }}
+        />
+      )}
       {props.children}
     </View>
   );

@@ -6,9 +6,7 @@ type NeumorphismProps = {
   darkColor?: string;
   radius?: number;
   shapeType?: 'flat' | 'pressed' | 'basin';
-  backgroundColor?: string;
   style?: ViewStyle;
-  color?: string;
   disabled?: boolean;
   children?: React.ReactNode;
 };
@@ -24,9 +22,9 @@ export default function (props: NeumorphismProps) {
       (props.shapeType === 'basin' ? ',' + cssShadow(true) : ''),
     borderRadius: props.radius,
   };
-  if (!props.disabled) {
-    return <View style={style}>{props.children}</View>;
-  } else {
-    return <View>{props.children}</View>;
-  }
+  return (
+    <View style={[!props.disabled && style, props.style]}>
+      {props.children}
+    </View>
+  );
 }

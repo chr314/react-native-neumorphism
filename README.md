@@ -1,5 +1,7 @@
 # react-native-neumorphism
 
+Neumorphism shadows for Android, iOS and Web
+
 ![Screenshot](https://github.com/chr314/react-native-neumorphism/blob/master/screenshot.png?raw=true)
 
 ## Installation
@@ -27,9 +29,6 @@ import Neumorphism from "react-native-neumorphism";
 </Neumorphism>
 ```
 
-## Contributing
-
-See the [contributing guide](CONTRIBUTING.md) to learn how to contribute to the repository and the development workflow.
 
 ## License
 

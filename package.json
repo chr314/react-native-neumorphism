@@ -34,7 +34,11 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "web",
+    "shadow",
+    "neumorphism",
+    "neumorph"
   ],
   "repository": "https://github.com/chr314/react-native-neumorphism",
   "author": "Christoforos Aslanov <christoforos@christoforos.dev> (https://github.com/chr314)",
