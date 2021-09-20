@@ -1,11 +1,11 @@
 # react-native-neumorphism
 
-wip
+![Screenshot](https://github.com/chr314/react-native-neumorphism/blob/master/screenshot.png?raw=true)
 
 ## Installation
 
 ```sh
-yarn install react-native-neumorphism
+yarn add react-native-neumorphism
 ```
 
 ## Usage

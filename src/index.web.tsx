@@ -14,11 +14,14 @@ type NeumorphismProps = {
 };
 
 export default function (props: NeumorphismProps) {
+  let cssShadow = (inset = false) => {
+    let insetCss = inset ? 'inset' : '';
+    return `${insetCss} 6px 6px 8px ${props.darkColor}, ${insetCss} -6px -6px 8px ${props.lightColor}`;
+  };
   let style = {
     boxShadow:
-      props.shapeType === 'pressed'
-        ? `inset 6px 6px 7px ${props.darkColor}, inset -6px -6px 7px ${props.lightColor}`
-        : `6px 6px 12px ${props.darkColor},-6px -6px 12px ${props.lightColor}`,
+      cssShadow(props.shapeType === 'pressed') +
+      (props.shapeType === 'basin' ? ',' + cssShadow(true) : ''),
     borderRadius: props.radius,
   };
   if (!props.disabled) {
