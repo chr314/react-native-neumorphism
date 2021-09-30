@@ -2,7 +2,7 @@
 
 Neumorphism shadows for Android, iOS and Web
 
-![Screenshot](https://github.com/chr314/react-native-neumorphism/blob/master/screenshot.png?raw=true)
+<img src="https://github.com/chr314/react-native-neumorphism/blob/master/screenshot.png?raw=true" width='200' alt='screenshot'>
 
 ## Installation
 
