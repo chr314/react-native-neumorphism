@@ -77,7 +77,9 @@ export default function Neumorphism(props: NeumorphismProps) {
             shadowRadius: 3,
           }}
         >
-          <View>{props.children}</View>
+          <View style={{ borderRadius: props.radius, overflow: 'hidden' }}>
+            {props.children}
+          </View>
         </View>
       </View>
     );

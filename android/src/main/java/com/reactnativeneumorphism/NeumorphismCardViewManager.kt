@@ -1,5 +1,6 @@
 package com.reactnativeneumorphism
 
+import android.content.res.Resources
 import android.graphics.Color
 import android.view.View
 import com.facebook.react.uimanager.ThemedReactContext
@@ -37,7 +38,8 @@ class NeumorphismCardViewManager : ViewGroupManager<NeumorphCardView>() {
 
   @ReactProp(name = "radius")
   fun setRadius(view: NeumorphCardView, radius: Float) {
-    view.setShapeAppearanceModel(appearance.setCornerRadius(radius).build())
+    val newRadius = radius * Resources.getSystem().displayMetrics.density
+    view.setShapeAppearanceModel(appearance.setCornerRadius(newRadius).build())
   }
 
   @ReactProp(name = "shapeType")

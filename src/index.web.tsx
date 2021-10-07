@@ -21,8 +21,11 @@ export default function (props: NeumorphismProps) {
       cssShadow(props.shapeType === 'pressed') +
       (props.shapeType === 'basin' ? ',' + cssShadow(true) : ''),
     borderRadius: props.radius,
+    overflow: 'hidden',
   };
+
   return (
+    // @ts-ignore
     <View style={[!props.disabled && style, props.style]}>
       {props.children}
     </View>

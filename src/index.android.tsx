@@ -40,7 +40,9 @@ export default (props: NeumorphismProps) => {
           }}
         />
       )}
-      {props.children}
+      <View style={{ borderRadius: props.radius, overflow: 'hidden' }}>
+        {props.children}
+      </View>
     </View>
   );
 };
