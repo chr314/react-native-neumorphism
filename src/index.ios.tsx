@@ -19,66 +19,64 @@ export default function Neumorphism(props: NeumorphismProps) {
       shadowOpacity: 1,
     };
     return (
-      <View
-        style={[
-          insetStyles.container,
-          { borderRadius: props.radius },
-          props.style,
-        ]}
-      >
-        {props.children}
-        {!props.disabled && (
-          <>
-            <Shadow
-              type={'left'}
-              {...shadowProps}
-              shadowColor={props.darkColor}
-            />
-            <Shadow
-              type={'top'}
-              {...shadowProps}
-              shadowColor={props.darkColor}
-            />
-            <Shadow
-              type={'right'}
-              {...shadowProps}
-              shadowColor={props.lightColor}
-            />
-            <Shadow
-              type={'bottom'}
-              {...shadowProps}
-              shadowColor={props.lightColor}
-            />
-          </>
-        )}
+      <View style={props.style}>
+        <View style={[insetStyles.container, { borderRadius: props.radius }]}>
+          {props.children}
+          {!props.disabled && (
+            <>
+              <Shadow
+                type={'left'}
+                {...shadowProps}
+                shadowColor={props.darkColor}
+              />
+              <Shadow
+                type={'top'}
+                {...shadowProps}
+                shadowColor={props.darkColor}
+              />
+              <Shadow
+                type={'right'}
+                {...shadowProps}
+                shadowColor={props.lightColor}
+              />
+              <Shadow
+                type={'bottom'}
+                {...shadowProps}
+                shadowColor={props.lightColor}
+              />
+            </>
+          )}
+        </View>
       </View>
     );
   } else {
     return (
-      <View
-        style={{
-          shadowColor: props.lightColor,
-          shadowOffset: {
-            width: -5,
-            height: -5,
-          },
-          shadowOpacity: 1,
-          shadowRadius: 3,
-        }}
-      >
+      <View style={props.style}>
         <View
           style={{
-            shadowColor: props.darkColor,
+            shadowColor: props.lightColor,
             shadowOffset: {
-              width: 5,
-              height: 5,
+              width: -5,
+              height: -5,
             },
             shadowOpacity: 1,
             shadowRadius: 3,
           }}
         >
-          <View style={{ borderRadius: props.radius, overflow: 'hidden' }}>
-            {props.children}
+          <View
+            style={{
+              shadowColor: props.darkColor,
+              shadowOffset: {
+                width: 5,
+                height: 5,
+              },
+              shadowOpacity: 1,
+              shadowRadius: 3,
+            }}
+          >
+            <View style={{ borderRadius: props.radius, overflow: 'hidden' }}>
+              {props.children}
+            </View>
           </View>
         </View>
       </View>
